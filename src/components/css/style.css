@@ -1,0 +1,279 @@
+@import url("https://fonts.googleapis.com/css2?family=Jost:ital@0;1&display=swap");
+* {
+    padding:0;
+    margin:0;
+    font-family: "Jost", sans-serif; 
+}
+body{
+    background: #acc2e7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:100vh;
+    width: 100vw;
+    font-family: "Jost", sans-serif;
+}
+html{
+    font-size: 100%;
+    height: 100%;
+}
+html{
+    background: #57658a;
+}
+
+.box{
+    width: 25vw;
+    height: 60vh;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.2rem rgba(0, 0, 0, 0.2);
+    background: #8ab0e9;
+    position: relative;
+    overflow: hidden;
+    transform: translate3d(0, 0, 0);
+    min-width: 20rem;
+    min-height: 35rem;
+}
+.inputField {
+    width: 80%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 20px auto;
+    display: block;
+    box-sizing: border-box; 
+}
+.inputData {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5px;
+}
+
+label[for="threshold"], #threshold {
+    margin-top: 5px;
+    width: 60%;
+    text-align: center;
+}
+
+#threshold {
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    margin-top: 5px;
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.1);
+    outline: none;
+}
+
+.wave{
+opacity: 0.3;
+position: absolute;
+top: 120%;
+left: 50%;
+background: white;
+width: 50rem;
+height: 50rem;
+margin-left: -25rem;
+margin-top: -20rem;
+transform-origin: 50% 48%;
+border-radius: 43%;
+animation: drift 3000ms infinite linear;
+z-index: 1;
+}
+.wave -three{
+    animation: drift 5000ms infinite linear;
+    z-index: 2 !important;
+    opacity: 0.2;
+}
+.wave -two{
+    animation: drift 7000ms infinite linear;
+    opacity: 0.1;
+    z-index: 3 !important;
+}
+.box:after{
+    content: "";
+    display: block;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 11;
+    transform: translate3d(0, 0, 0);
+}
+@keyframes drift {
+    from{
+        transform: rotate(0deg);
+    }
+    from{
+        transform: rotate(360deg);
+    }
+}
+.info {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 45%;
+    z-index: 4;
+}
+.weatherDescriptionContainer {
+    text-align: center;
+    margin: 1rem 0;
+}
+
+.weatherDescription {
+    font-size: 1.2rem;
+    color: #57606f;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.location {
+    margin-top: 1.5rem;
+    text-align: center;
+    font-weight: 800;
+    font-size: 3rem;
+    font-weight: 400;
+}
+.fa-street-view{
+    animation: rotates 3s linear infinite alternate;
+}
+@keyframes rotates {
+    from {
+        transform: translate(-0.5rem);
+    }
+    to {
+        transform: translate(0.5rem);
+    }
+}
+#date {
+    text-align: center;
+    margin-top: 0.2rem;
+    color: #57606f;
+    font-size: 1rem;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+.temp {
+    margin-top: 1rem;
+    text-align: center;
+    font-size: 3rem;
+}
+.tempmin_max {
+    text-align: center;
+    margin-top: 0.3rem;
+    font-weight: 300;
+    font-size: 1.2rem;
+    color: #57606f;
+}
+.weathercon {
+    height: 55%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3em;
+}
+#weathercon .fas {
+    font-size: 6rem;
+    animation: fas-anime 3s linear infinite alternate;
+}
+
+@keyframes fas-anime {
+    from {
+        transform: scale(0.8);
+    }
+    to{
+        transform: scale(1.2);
+    }
+}
+.dropdownButton {
+    padding: 8px 12px;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    background-color: #8ab0e9;
+    color: white; 
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.dropdownButton:hover {
+    background-color:#8ab0e9;
+}
+
+.dropdown {
+    background: #8ab0e9;;
+    border: 1px solid #8ab0e9;
+    border-radius: 5px;
+    padding: 10px;
+    position: absolute;
+    z-index: 10;
+  }
+  
+  .dropdownHeading {
+    margin: 10px 0;
+    font-size: 1.2em;
+    font-weight: bold;
+    background: #8ab0e9;
+  }
+  
+  .dropdownItem {
+    margin: 5px 0;
+    padding: 5px;
+    border-bottom: 1px solid #8ab0e9;
+    cursor: pointer;
+  }
+  
+  .dropdownItem:last-child {
+    border-bottom: none;
+  }
+  .dropdownItem h4 {
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+.dropdownItem p {
+    margin: 5px 0 0 0;
+    font-size: 1rem;
+}
+.dropdownItem:hover {
+    background: #8ab0e9; 
+}
+  .currentDaySummary {
+    margin-bottom: 15px;
+  }
+  
+  .weatherIcon {
+    font-size: 2em; 
+  }
+  
+
+@media (max-width: 600px) {
+    .box{
+        width: 90vw;
+        height: 80vh;
+    }
+    .wave {
+        top: 85%;
+    }
+    #weathercon {
+        font-size: 5em;
+    }
+    .info {
+        font-size: 1.5rem;
+    }
+    
+}
+@media (max-height: 500px){
+    .box {
+        height: 80vh;
+    }
+    .wave {
+        top: 115%;
+    }
+}
+body>span {
+    width: 100vw;
+    text-align: center;
+    color: grey;
+}
