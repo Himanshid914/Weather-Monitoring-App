@@ -20,7 +20,7 @@ Dependencies
 The following are the major dependencies required for the application:
 
 React: JavaScript library for building the user interface.
-OpenWeatherMap API: To fetch the weather data.
+OpenWeatherMap API (https://api.openweathermap.org): To fetch the weather data.
 Font Awesome: For displaying weather icons.
 
 To install dependencies, run:
