@@ -7,4 +7,5 @@ function App() {
        <Tempapp />
   );
 }
+//Export the app module
 export default App;

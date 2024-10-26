@@ -14,7 +14,7 @@ const Tempapp = () => {
   const [consecutiveBreaches, setConsecutiveBreaches] = useState(0);
   const [alertTriggered, setAlertTriggered] = useState(false);
 
-
+//Hooks
   useEffect(() => {
     const fetchApi = async () => {
       if (search.trim() === "") {
